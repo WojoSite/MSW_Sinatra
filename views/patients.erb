@@ -1,0 +1,19 @@
+<h1>PATIENTS</h1>
+
+<form id="patient-submit-form" action="/patientform" method="post">
+  <input class="form-input" type="text" name="firstname" value="" placeholder="First Name">
+  <input class="form-input" type="text" name="lastname" value="" placeholder="Last Name">
+  <button id="submit-button" type="submit" name="button">Add Patient</button>
+
+  <!-- i.integer :emr_id -->
+
+  <div id="patient-list">
+    <p>Patients:</p>
+    <ul>
+      <% @patients.each do |patient|%>
+        <li><%= patient.firstname %></li>
+      <% end %>
+    </ul>
+  </div>
+
+</form>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <!-- ======= ======= ======= head ======= ======= ======= -->
+	<head>
+	    <link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+  <!-- ======= ======= ======= body ======= ======= ======= -->
+	<body>
+	    <!-- ======= menu ======= -->
+		<div id="menu-container" class="section">
+			<%= erb :menu %>
+		</div>
+	    </div>
+	    <!-- ======= content ======= -->
+		<div id="yield-container" class="section">
+			<%= yield %>
+		</div>
+	    <!-- ======= footer ======= -->
+	    <div id="footer" class="section">
+	        <p id="footer-text">&copy; WojoCorp. 2017</p>
+	    </div>
+	    <!-- ======= scripts ======= -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="/script.js"></script>
+	</body>
+</html>

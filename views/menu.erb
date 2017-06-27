@@ -1,0 +1,15 @@
+<!-- ======= views/menu.erb ======= -->
+<% menu_items = ["patients","doctors", "clinics", "appointments"] %>
+
+<a href=<%= :/ %>>
+  <div id="company-logo">
+    <p id="logo-text">WojoCorp Health</p>
+  </div>
+</a>
+<div id="menu-items">
+  <% for x in menu_items %>
+    <a href=<%= x %>>
+      <div class="menu-item"> <%= x %> </div>
+    </a>
+  <% end %>
+</div>
