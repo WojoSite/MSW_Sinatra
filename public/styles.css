@@ -46,6 +46,10 @@ a{
   background-color: #b30000;
 }
 
+#yield-container{
+  padding: 20px;
+}
+
 #footer{
   position: fixed;
   box-sizing: border-box;
@@ -60,4 +64,9 @@ a{
 #footer-text{
   margin: 0;
   line-height: 60px;
+}
+
+.patient-name-display{
+  margin: 0;
+  display: inline-block;
 }

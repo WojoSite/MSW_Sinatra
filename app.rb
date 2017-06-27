@@ -22,10 +22,32 @@ end
 post '/patientform' do
 	puts "\n******* patient form *******"
   Patient.create(
-		firstname: params[:firstname],
-		lastname: params[:lastname],
+		firstname: params[:patient][:firstname],
+		lastname: params[:patient][:lastname],
 	)
-	erb :patients
+	# create emr foreign key here
+	# insert int
+	Emr.create(
+		diagnosis: params[:emr][:diagnosis],
+		prognosis: params[:emr][:diagnosis],
+	)
+	puts "\n******* patient params *******"
+	puts params.inspect
+	redirect "/patients"
+end
+
+get '/patientupdate/:id' do
+	@patient = Patient.find(params[:id])
+	puts "patient: #{@patient.id}"
+	puts "PATIENT UPDATE HAS RUN"
+	erb :patientupdate
+end
+
+
+get '/deletepatient/:id' do
+	puts "\n******* delete patient *******"
+	Patient.find(params[:id]).destroy
+	redirect "/patients"
 end
 
 get '/doctors' do
