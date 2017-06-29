@@ -37,12 +37,11 @@ post '/patientform' do
 end
 
 get '/patientupdate/:id' do
-	@patient = Patient.find(params[:id])
-	puts "patient: #{@patient.id}"
-	puts "PATIENT UPDATE HAS RUN"
+	# @patient = Patient.find(params[:id])
+	# puts "patient: #{@patient.id}"
+	# puts "PATIENT UPDATE HAS RUN"
 	erb :patientupdate
 end
-
 
 get '/deletepatient/:id' do
 	puts "\n******* delete patient *******"
